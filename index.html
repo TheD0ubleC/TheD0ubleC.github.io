@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Duolingo Session XP Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Duolingo Session XP Calculator</h1>
+    <div class="container fade-in" id="container">
+        <div class="form-section">
+            <label for="jwt">JWT Token:</label>
+            <input type="text" id="jwt" placeholder="输入 JWT Token">
+        </div>
+
+        <div class="form-section">
+            <div class="radio-group">
+                <input type="radio" id="noDate" name="dateOption" checked onclick="toggleInputs(false)">
+                <label for="noDate">不指定日期</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="specifyDate" name="dateOption" onclick="toggleInputs(true)">
+                <label for="specifyDate">指定日期</label>
+            </div>
+        </div>
+
+        <div class="form-section" id="loopInput">
+            <label for="numLoops">循环次数:</label>
+            <input type="number" id="numLoops" placeholder="输入循环次数" min="1" value="1">
+        </div>
+
+        <div class="form-section hidden" id="dateInputs">
+            <label for="startDate">起始日期:</label>
+            <input type="date" id="startDate">
+            <label for="endDate">终止日期:</label>
+            <input type="date" id="endDate">
+        </div>
+
+        <button onclick="handleDuolingoSession()">执行</button>
+
+        <div id="output"></div>
+
+        <div class="progress hidden">
+            <p>目前经过了: <span id="progressCount">0</span>/<span id="totalCount">0</span></p>
+            <p>已获得 XP: <span id="xpCount">0</span></p>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
