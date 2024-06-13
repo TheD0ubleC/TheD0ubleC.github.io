@@ -57,7 +57,7 @@ const backgroundEffect = (() => {
         background-color: white;
         transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1), background-image 0.5s;
         border-radius: 50%;
-        background-image: url('images/star.png');
+        background-image: url('https://thed0ublec.github.io/ParticleBackground/package/images/star.png');
         background-size: contain;
         background-repeat: no-repeat;
     }
@@ -68,7 +68,7 @@ const backgroundEffect = (() => {
 
     input:checked + .slider:before {
         transform: translateX(26px);
-        background-image: url('images/sakura.png');
+        background-image: url('https://thed0ublec.github.io/ParticleBackground/package/images/sakura.png');
     }
 
     .background {
@@ -91,7 +91,7 @@ const backgroundEffect = (() => {
     .particle, .explosion {
         position: absolute;
         top: -50px;
-        background: url('images/sakura.png') no-repeat center center;
+        background: url('https://thed0ublec.github.io/ParticleBackground/package/images/sakura.png') no-repeat center center;
         background-size: contain;
         opacity: 0.8;
         pointer-events: auto;
@@ -101,7 +101,7 @@ const backgroundEffect = (() => {
     }
 
     body.night-mode .particle, body.night-mode .explosion {
-        background-image: url('images/star.png');
+        background-image: url('https://thed0ublec.github.io/ParticleBackground/package/images/star.png');
     }
 
     .particle {
@@ -222,7 +222,7 @@ const backgroundEffect = (() => {
                 const isNightMode = document.body.classList.contains('night-mode');
                 const particles = document.querySelectorAll('.particle');
                 particles.forEach(particle => {
-                    particle.style.backgroundImage = isNightMode ? "url('images/star.png')" : "url('images/sakura.png')";
+                    particle.style.backgroundImage = isNightMode ? "url('https://thed0ublec.github.io/ParticleBackground/package/images/star.png')" : "url('https://thed0ublec.github.io/ParticleBackground/package/images/sakura.png')";
                 });
             }
 
@@ -246,7 +246,7 @@ const backgroundEffect = (() => {
                     link.rel = 'icon';
                     document.getElementsByTagName('head')[0].appendChild(link);
                 }
-                link.href = isNightMode ? 'images/star.png' : 'images/sakura.png';
+                link.href = isNightMode ? 'https://thed0ublec.github.io/ParticleBackground/package/images/star.png' : 'https://thed0ublec.github.io/ParticleBackground/package/images/sakura.png';
             }
             function handleOrientation(event) {
                 const x = event.gamma || 0; // 左右倾斜
